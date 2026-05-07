@@ -21,5 +21,10 @@ const checkType = (input: StringOrNumber): string => {
   throw new Error("Invalid input type");
 };
 
-console.log(checkType("Hello"));
-console.log(checkType(42));
+// Problem 4:
+const getProperty = <ObjectType, KeyType extends keyof ObjectType>(
+  obj: ObjectType,
+  key: KeyType,
+): ObjectType[KeyType] => {
+  return obj[key];
+};
