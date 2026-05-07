@@ -53,3 +53,12 @@ const myBook: Book = {
 };
 
 const result = toggleReadStatus(myBook);
+
+// Problem 6:
+
+// Problem 7:
+const getIntersection = (array1: number[], array2: number[]): number[] => {
+  return array1.filter((item) => array2.includes(item));
+};
+
+console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
