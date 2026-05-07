@@ -28,3 +28,28 @@ const getProperty = <ObjectType, KeyType extends keyof ObjectType>(
 ): ObjectType[KeyType] => {
   return obj[key];
 };
+
+// Problem 5:
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+interface ReadableBook extends Book {
+  isRead: boolean;
+}
+
+const toggleReadStatus = (book: Book): ReadableBook => {
+  return {
+    ...book,
+    isRead: true,
+  };
+};
+
+const myBook: Book = {
+  title: "TypeScript Guide",
+  author: "Jane Doe",
+  publishedYear: 2024,
+};
+
+const result = toggleReadStatus(myBook);
